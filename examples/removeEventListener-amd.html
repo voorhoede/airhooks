@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>airhooks/removeEventListener (amd)</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1><code><a href="../">airhooks/</a>removeEventListener</code> (amd)</h1>
+    <section>
+        <h2>Example</h2>
+        <p>Trigger ony increments counter when enabled. Uses add- & removeEventListener.</p>
+        <button class="btn btn-default" data-trigger>Trigger</button>
+        <button class="btn btn-default" data-enable-trigger>Enable</button>
+        <button class="btn btn-default" data-disable-trigger>Disable</button>
+        <output data-output>0</output>
+    </section>
+    <script src="../vendor/require.min.js"></script>
+    <script>
+        require.config({ baseUrl: '../' });
+        (function(){
+            var button = document.querySelector('[data-trigger]');
+            var onButton = document.querySelector('[data-enable-trigger]');
+            var offButton = document.querySelector('[data-disable-trigger]');
+            var output = document.querySelector('[data-output]');
+            var count = 0;
+            function increment() { count++; output.value = count; }
+
+            require(['airhooks/addEventListener', 'airhooks/removeEventListener'],
+            function(addEventListener, removeEventListener){
+                addEventListener(onButton, 'click', function(){
+                    addEventListener(button, 'click', increment);
+                });
+                addEventListener(offButton, 'click', function(){
+                    removeEventListener(button, 'click', increment);
+                });
+            });
+
+        }());
+    </script>
+</body>
+</html>

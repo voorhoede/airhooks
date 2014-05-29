@@ -13,7 +13,7 @@
 (function (root, airhooks, factory) {
 	var method = 'map';
 	if (typeof define === 'function' && define.amd) {
-		define('airhooks/'+method, ['airhooks/forEach'], factory);
+		define(['./forEach'], factory);
 	} else {
 		airhooks[method] = factory(airhooks.forEach);
 		root.airhooks = airhooks;

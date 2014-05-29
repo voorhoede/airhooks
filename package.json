@@ -1,6 +1,6 @@
 {
   "name": "airhooks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Collection of JavaScript helpers using a wrapper around native and fallback methods rather than using polyfills.",
   "main": "index.js",
   "directories": {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>airhooks/addEventListener (amd)</title>
@@ -8,20 +8,23 @@
 <body class="container">
     <h1><code><a href="../">airhooks/</a>addEventListener</code> (amd)</h1>
     <section>
+        <h2>Example</h2>
         <img data-image alt="get ready" />
         <button data-dance>Dance</button>
     </section>
     <script src="../vendor/require.min.js"></script>
     <script>
         require.config({ baseUrl: '../' });
-        var button = document.querySelector('[data-dance]');
-        var image = document.querySelector('[data-image]');
+        (function(){
+            var button = document.querySelector('[data-dance]');
+            var image = document.querySelector('[data-image]');
 
-        require(['airhooks/addEventListener'], function(addEventListener){
-            addEventListener(button, 'click', function(){
-                image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
+            require(['airhooks/addEventListener'], function(addEventListener){
+                addEventListener(button, 'click', function(){
+                    image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
+                });
             });
-        });
+        }());
     </script>
 </body>
 </html>

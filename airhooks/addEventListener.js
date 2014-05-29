@@ -3,7 +3,7 @@
  * @method airhooks.addEventListener
  *
  * Bind listener to event on target using whichever browser method is supported.
- * https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener
+ * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener)
  *
  * @example AMD
  *   require(['airhooks/addEventListener'], function(addEventListener) {

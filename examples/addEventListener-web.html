@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>airhooks.addEventListener (web)</title>
@@ -8,6 +8,7 @@
 <body class="container">
     <h1><code><a href="../">airhooks.</a>addEventListener</code> (web)</h1>
     <section>
+        <h2>Example</h2>
         <img data-image alt="get ready" />
         <button data-dance>Dance</button>
     </section>
@@ -16,6 +17,7 @@
         (function(airhooks){
             var button = document.querySelector('[data-dance]');
             var image = document.querySelector('[data-image]');
+
             airhooks.addEventListener(button, 'click', function(){
                 image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
             });

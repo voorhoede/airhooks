@@ -1,8 +1,8 @@
 /**
- * @module airhooks/addClass OR
- * @method airhooks.addClass
+ * @module airhooks/removeClass OR
+ * @method airhooks.removeClass
  *
- * Adds a class to an element's list of classes.
+ * Remove a class from an element's list of classes.
  * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element.classList)
  * [Original source](http://hacks.mozilla.org/2010/01/classlist-in-firefox-3-6/)
  *
@@ -10,7 +10,7 @@
  * @param {String} className
  */
 (function (root, airhooks, factory) {
-	var method = 'addClass';
+	var method = 'removeClass';
 	if (typeof define === 'function' && define.amd) {
 		define([/*deps*/], factory);
 	} else {
@@ -20,12 +20,10 @@
 }(this, this.airhooks || {}, function (/*deps*/) {
 	return function (element, className) {
 		if (document.documentElement.classList) {
-			element.classList.add(className);
+			element.classList.remove(className);
 		} else {
-			var re = new RegExp('(^|\\s)' + className + '(\\s|$)');
-			if (!element.className.match(re)) {
-				element.className += (element.className ? ' ' : '') + className;
-			}
+			var regexp = new RegExp('(^|\\s)' + className + '(\\s|$)', 'g');
+			element.className = element.className.replace(regexp, '$2');
 		}
 	};
 }));

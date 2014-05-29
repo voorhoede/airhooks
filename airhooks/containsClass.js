@@ -1,8 +1,8 @@
 /**
- * @module airhooks/addClass OR
- * @method airhooks.addClass
+ * @module airhooks/containsClass OR
+ * @method airhooks.containsClass
  *
- * Adds a class to an element's list of classes.
+ * Checks if an element's list of classes contains a specific class.
  * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Element.classList)
  * [Original source](http://hacks.mozilla.org/2010/01/classlist-in-firefox-3-6/)
  *
@@ -10,7 +10,7 @@
  * @param {String} className
  */
 (function (root, airhooks, factory) {
-	var method = 'addClass';
+	var method = 'containsClass';
 	if (typeof define === 'function' && define.amd) {
 		define([/*deps*/], factory);
 	} else {
@@ -20,13 +20,10 @@
 }(this, this.airhooks || {}, function (/*deps*/) {
 	return function (element, className) {
 		if (document.documentElement.classList) {
-			element.classList.add(className);
+			return element.classList.contains(className);
 		} else {
 			var re = new RegExp('(^|\\s)' + className + '(\\s|$)');
-			if (!element.className.match(re)) {
-				element.className += (element.className ? ' ' : '') + className;
-			}
+			return element.className.match(re);
 		}
 	};
 }));
-

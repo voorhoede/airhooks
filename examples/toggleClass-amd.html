@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>airhooks/addClass (amd)</title>
+    <title>airhooks/toggleClass (amd)</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body class="container">
-    <h1><code><a href="../">airhooks/</a>addClass</code> (amd)</h1>
+    <h1><code><a href="../">airhooks/</a>toggleClass</code> (amd)</h1>
     <section>
         <h2>Example</h2>
         <button class="btn btn-default" data-trigger>color me</button>
@@ -17,9 +17,9 @@
         (function(){
             var button = document.querySelector('[data-trigger]');
 
-            require(['airhooks/addClass'], function(addClass){
+            require(['airhooks/toggleClass'], function(toggleClass){
                 button.addEventListener('click', function() {
-                    addClass(button, 'btn-success');
+                    toggleClass(button, 'btn-success');
                 }, false);
             });
         }());

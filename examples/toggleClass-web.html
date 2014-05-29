@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>airhooks.addClass (web)</title>
+    <title>airhooks.toggleClass (web)</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body class="container">
-    <h1><code><a href="../">airhooks.</a>addClass</code> (web)</h1>
+    <h1><code><a href="../">airhooks.</a>toggleClass</code> (web)</h1>
     <section>
         <h2>Example</h2>
         <button class="btn btn-default" data-trigger>color me</button>
     </section>
     <script src="../airhooks/addClass.js"></script>
+    <script src="../airhooks/containsClass.js"></script>
+    <script src="../airhooks/removeClass.js"></script>
+    <script src="../airhooks/toggleClass.js"></script>
     <script>
         (function(airhooks){
             var button = document.querySelector('[data-trigger]');
 
             button.addEventListener('click', function() {
-                airhooks.addClass(button, 'btn-success');
+                airhooks.toggleClass(button, 'btn-success');
             }, false);
         }(this.airhooks));
     </script>

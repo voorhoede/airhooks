@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>airhooks.map (web)</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1><code><a href="../">airhooks.</a>map</code> (web)</h1>
+    <section>
+        <h2>Example</h2>
+        <ul data-list>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <output data-output></output>
+        <button data-trigger>show sequence</button>
+    </section>
+    <script src="../airhooks/forEach.js"></script>
+    <script src="../airhooks/map.js"></script>
+    <script>
+        (function(airhooks){
+            var button = document.querySelector('[data-trigger]');
+            var output = document.querySelector('[data-output]');
+            var items = document.querySelectorAll('[data-list] li');
+
+            button.addEventListener('click', function(){
+                var sequence = airhooks.map(items, function(item, index, list){
+                    return item.innerHTML;
+                });
+                output.value = sequence;
+            }, false);
+        }(this.airhooks));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{$ doc.codeName $} | {$ extraData.config.rendering.voorhoede.siteName $}</title>
+
+		{% for stylesheet in extraData.config.rendering.voorhoede.stylesheets %}
+		<link rel="stylesheet" href="{$ stylesheet $}">
+		{% endfor %}
+	</head>
+	<body>
+
+		<h1 class="caps">
+			<a href="{$ extraData.config.rendering.voorhoede.baseHref $}">
+				{$ extraData.config.rendering.voorhoede.siteName $}
+			</a>
+		</h1>
+
+		<div style="float: left; width: 35%">
+
+			<ul>
+				{% for doc in docs -%}
+					{% if doc.docType == "module" %}
+					<li><a href="{$ doc.href $}">{$ doc.codeName $}</a></li>
+					{% endif %}
+				{%- endfor %}
+			</ul>
+
+		</div>
+
+		<div style="float: right; width: 60%;">
+
+			{% block content %}
+			{% endblock %}
+
+		</div>
+
+	</body>
+</html>

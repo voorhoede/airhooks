@@ -22,4 +22,12 @@ module.exports = function (grunt) {
 
 	// load all project grunt tasks.
 	grunt.registerTask('default', ['']);
+
+	grunt.registerTask('docs', 'Generate docs via dgeni.', function() {
+		var dgeni = require('dgeni');
+		var done = this.async();
+
+		var generateDocs = dgeni.generator('docs/dgeni.conf.js');
+		generateDocs().then(done);
+	});
 };

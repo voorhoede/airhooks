@@ -37,6 +37,13 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "matchdep": "^0.3.0",
-    "grunt-bump": "0.0.14"
+    "grunt-bump": "0.0.14",
+    "dgeni": "~0.3.0",
+    "dgeni-packages": "~0.9.3",
+    "voorhoede-dgeni-packages": "git://github.com/mvbschot/voorhoede-dgeni-packages#master",
+    "canonical-path": "0.0.2",
+    "lodash-node": "~2.4.1",
+    "winston": "~0.7.3",
+    "q-io": "~1.11.2"
   }
 }

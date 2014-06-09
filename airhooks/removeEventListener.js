@@ -22,7 +22,7 @@
 	 * @param {Function} listener - Event listener called when event is triggered.
 	 *
 	 * @example Trigger ony increments counter when enabled. Uses add- & removeEventListener.
-	   <example name="toggleClass-amd" type="AMD" deps="vendor/require.min.js">
+	   <example name="removeEventListener-amd" type="AMD" deps="vendor/require.min.js">
 	   	<file name="index.html">
 	   		<button class="button button-default" data-trigger>Trigger</button>
 	   		<button class="button button-default" data-enable-trigger>Enable</button>
@@ -53,7 +53,7 @@
 	   	</file>
 	   </example>
 
-	   <example name="toggleClass-web"
+	   <example name="removeEventListener-web"
 	            type="web"
 	            deps="airhooks/addEventListener.js;airhooks/removeEventListener.js">
 	   	<file name="index.html">

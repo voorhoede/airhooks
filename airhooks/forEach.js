@@ -22,7 +22,7 @@
 	 * @param {Object} [context] - Value to use as this when executing callback.
 	 *
 	 * @example
-	   <example name="addEventListener-amd" type="AMD" deps="vendor/require.min.js">
+	   <example name="forEach-amd" type="AMD" deps="vendor/require.min.js">
 	   	<file name="index.html">
 	   		<ul data-list>
 	   			<li>1</li>
@@ -49,7 +49,7 @@
 	   	</file>
 	   </example>
 
-	   <example name="addEventListener-web" type="web" deps="airhooks/forEach.js">
+	   <example name="forEach-web" type="web" deps="airhooks/forEach.js">
 	   	<file name="index.html">
 	   		<ul data-list>
 	   			<li>1</li>

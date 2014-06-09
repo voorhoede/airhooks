@@ -22,7 +22,7 @@
 	 * @param {Object} [context] - Value to use as this when executing callback.
 	 *
 	 * @example
-	   <example name="toggleClass-amd" type="AMD" deps="vendor/require.min.js">
+	   <example name="map-amd" type="AMD" deps="vendor/require.min.js">
 	   	<file name="index.html">
 	   		<ul data-list>
 	   			<li>1</li>
@@ -52,7 +52,7 @@
 	   	</file>
 	   </example>
 
-	   <example name="toggleClass-web" type="web" deps="airhooks/forEach.js;airhooks/map.js">
+	   <example name="map-web" type="web" deps="airhooks/forEach.js;airhooks/map.js">
 	   	<file name="index.html">
 	   		<ul data-list>
 	   			<li>1</li>

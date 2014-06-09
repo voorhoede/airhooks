@@ -21,7 +21,7 @@
 	 * @param {String} className
 	 *
 	 * @example
-	   <example name="toggleClass-amd" type="AMD" deps="vendor/require.min.js">
+	   <example name="removeClass-amd" type="AMD" deps="vendor/require.min.js">
 	   	<file name="index.html">
 	   		<button class="button button-primary" data-trigger>uncolor me</button>
 	   	</file>
@@ -36,7 +36,7 @@
 	   	</file>
 	   </example>
 
-	   <example name="toggleClass-web" type="web" deps="airhooks/removeClass.js">
+	   <example name="removeClass-web" type="web" deps="airhooks/removeClass.js">
 	   	<file name="index.html">
 	   		<button class="button button-primary" data-trigger>uncolor me</button>
 	   	</file>

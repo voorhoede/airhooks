@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{$ doc.codeName $} | {$ extraData.config.rendering.voorhoede.siteName $}</title>
+		<title>{% if doc.codeName %}{$ doc.codeName $} | {% endif %}{$ extraData.config.rendering.voorhoede.siteName $}</title>
 
 		{% for stylesheet in extraData.config.rendering.voorhoede.stylesheets %}
 		<link rel="stylesheet" href="{$ stylesheet $}">

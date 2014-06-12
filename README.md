@@ -10,3 +10,7 @@ Airhooks is a collection of JavaScript helpers using a wrapper around native and
 * Name parameters same as in MDN documentation.
 * Use UMD JS's amdWeb template.
 * Use JSDoc for documentation.
+
+## To do
+
+* Include dependencies via Bower?

@@ -21,35 +21,35 @@
 	 * @param {String} className
 	 *
 	 * @example
-	   <example name="addClass-amd" type="AMD" deps="vendor/require.min.js">
-	   	<file name="index.html">
-	   		<button class="button" data-trigger>color me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		require(['airhooks/addClass'], function(addClass){
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="addClass-amd" type="AMD" deps="vendor/require.min.js">
+		<file name="index.html">
+			<button class="button" data-trigger>color me</button>
+		</file>
+		<file name="app.js">
+			require(['airhooks/addClass'], function(addClass){
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				addClass(button, 'button-primary');
-	   			}, false);
-	   		});
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					addClass(button, 'button-primary');
+				}, false);
+			});
+		</file>
+		</example>
 
-	   <example name="addClass-web" type="web" deps="airhooks/addClass.js">
-	   	<file name="index.html">
-	   		<button class="button" data-trigger>color me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		(function(airhooks){
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="addClass-web" type="web" deps="airhooks/addClass.js">
+		<file name="index.html">
+			<button class="button" data-trigger>color me</button>
+		</file>
+		<file name="app.js">
+			(function(airhooks){
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				airhooks.addClass(button, 'button-primary');
-	   			}, false);
-	   		}(this.airhooks));
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					airhooks.addClass(button, 'button-primary');
+				}, false);
+			}(this.airhooks));
+		</file>
+		</example>
 	 */
 	return function addClass(element, className) {
 		if (document.documentElement.classList) {

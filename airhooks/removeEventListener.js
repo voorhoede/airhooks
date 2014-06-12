@@ -22,69 +22,69 @@
 	 * @param {Function} listener - Event listener called when event is triggered.
 	 *
 	 * @example Trigger ony increments counter when enabled. Uses add- & removeEventListener.
-	   <example name="removeEventListener-amd" type="AMD" deps="vendor/require.min.js">
-	   	<file name="index.html">
-	   		<button class="button button-default" data-trigger>Trigger</button>
-	   		<button class="button button-default" data-enable-trigger>Enable</button>
-	   		<button class="button button-default" data-disable-trigger>Disable</button>
-	   		<output data-output>0</output>
-	   	</file>
-	   	<file name="app.js">
-	   		require(['airhooks/addEventListener', 'airhooks/removeEventListener'],
-	   			function(addEventListener, removeEventListener) {
-	   				var button = document.querySelector('[data-trigger]');
-	   				var onButton = document.querySelector('[data-enable-trigger]');
-	   				var offButton = document.querySelector('[data-disable-trigger]');
-	   				var output = document.querySelector('[data-output]');
-	   				var count = 0;
+		<example name="removeEventListener-amd" type="AMD" deps="vendor/require.min.js">
+		<file name="index.html">
+			<button class="button button-default" data-trigger>Trigger</button>
+			<button class="button button-default" data-enable-trigger>Enable</button>
+			<button class="button button-default" data-disable-trigger>Disable</button>
+			<output data-output>0</output>
+		</file>
+		<file name="app.js">
+			require(['airhooks/addEventListener', 'airhooks/removeEventListener'],
+				function(addEventListener, removeEventListener) {
+					var button = document.querySelector('[data-trigger]');
+					var onButton = document.querySelector('[data-enable-trigger]');
+					var offButton = document.querySelector('[data-disable-trigger]');
+					var output = document.querySelector('[data-output]');
+					var count = 0;
 
-	   				function increment() {
-	   					count++;
-	   					output.value = count;
-	   				}
+					function increment() {
+						count++;
+						output.value = count;
+					}
 
-	   				addEventListener(onButton, 'click', function() {
-	   					addEventListener(button, 'click', increment);
-	   				});
-	   				addEventListener(offButton, 'click', function() {
-	   					removeEventListener(button, 'click', increment);
-	   				});
-	   			});
-	   	</file>
-	   </example>
+					addEventListener(onButton, 'click', function() {
+						addEventListener(button, 'click', increment);
+					});
+					addEventListener(offButton, 'click', function() {
+						removeEventListener(button, 'click', increment);
+					});
+				});
+		</file>
+		</example>
 
-	   <example name="removeEventListener-web"
-	            type="web"
-	            deps="airhooks/addEventListener.js;airhooks/removeEventListener.js">
-	   	<file name="index.html">
-	   		<button class="button button-default" data-trigger>Trigger</button>
-	   		<button class="button button-default" data-enable-trigger>Enable</button>
-	   		<button class="button button-default" data-disable-trigger>Disable</button>
-	   		<output data-output>0</output>
-	   	</file>
-	   	<file name="app.js">
-	   		(function(airhooks) {
-	   			var button = document.querySelector('[data-trigger]');
-	   			var onButton = document.querySelector('[data-enable-trigger]');
-	   			var offButton = document.querySelector('[data-disable-trigger]');
-	   			var output = document.querySelector('[data-output]');
-	   			var count = 0;
+		<example name="removeEventListener-web"
+				type="web"
+				deps="airhooks/addEventListener.js;airhooks/removeEventListener.js">
+		<file name="index.html">
+			<button class="button button-default" data-trigger>Trigger</button>
+			<button class="button button-default" data-enable-trigger>Enable</button>
+			<button class="button button-default" data-disable-trigger>Disable</button>
+			<output data-output>0</output>
+		</file>
+		<file name="app.js">
+			(function(airhooks) {
+				var button = document.querySelector('[data-trigger]');
+				var onButton = document.querySelector('[data-enable-trigger]');
+				var offButton = document.querySelector('[data-disable-trigger]');
+				var output = document.querySelector('[data-output]');
+				var count = 0;
 
-	   			function increment() {
-	   				count++;
-	   				output.value = count;
-	   			}
+				function increment() {
+					count++;
+					output.value = count;
+				}
 
-	   			airhooks.addEventListener(onButton, 'click', function() {
-	   				airhooks.addEventListener(button, 'click', increment);
-	   			});
-	   			airhooks.addEventListener(offButton, 'click', function() {
-	   				airhooks.removeEventListener(button, 'click', increment);
-	   			});
+				airhooks.addEventListener(onButton, 'click', function() {
+					airhooks.addEventListener(button, 'click', increment);
+				});
+				airhooks.addEventListener(offButton, 'click', function() {
+					airhooks.removeEventListener(button, 'click', increment);
+				});
 
-	   		}(this.airhooks));
-	   	</file>
-	   </example>
+			}(this.airhooks));
+		</file>
+		</example>
 	 */
 	return function removeEventListener(target, type, listener) {
 		if (document.removeEventListener) {
@@ -92,5 +92,5 @@
 		} else {
 			target.detachEvent('on' + type, listener);
 		}
-	}
+	};
 }));

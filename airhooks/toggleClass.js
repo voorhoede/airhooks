@@ -26,39 +26,39 @@
 	 * @param {Boolean} [force] - Force the class name to be added or removed based on value's truthiness.
 	 *
 	 * @example
-	   <example name="toggleClass-amd" type="AMD" deps="vendor/require.min.js">
-	   	<file name="index.html">
-	   		<button class="button button-primary" data-trigger>color me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		require(['airhooks/toggleClass'], function(toggleClass){
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="toggleClass-amd" type="AMD" deps="vendor/require.min.js">
+		<file name="index.html">
+			<button class="button button-primary" data-trigger>color me</button>
+		</file>
+		<file name="app.js">
+			require(['airhooks/toggleClass'], function(toggleClass){
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				toggleClass(button, 'button-primary');
-	   				toggleClass(button, 'button-inverse');
-	   			}, false);
-	   		});
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					toggleClass(button, 'button-primary');
+					toggleClass(button, 'button-inverse');
+				}, false);
+			});
+		</file>
+		</example>
 
-	   <example name="toggleClass-web"
-	            type="web"
-	            deps="airhooks/addClass.js;airhooks/containsClass.js;airhooks/removeClass.js;airhooks/toggleClass.js">
-	   	<file name="index.html">
-	   		<button class="button button-primary" data-trigger>color me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		(function(airhooks){
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="toggleClass-web"
+				type="web"
+				deps="airhooks/addClass.js;airhooks/containsClass.js;airhooks/removeClass.js;airhooks/toggleClass.js">
+		<file name="index.html">
+			<button class="button button-primary" data-trigger>color me</button>
+		</file>
+		<file name="app.js">
+			(function(airhooks){
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				airhooks.toggleClass(button, 'button-primary');
-	   				airhooks.toggleClass(button, 'button-inverse');
-	   			}, false);
-	   		}(this.airhooks));
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					airhooks.toggleClass(button, 'button-primary');
+					airhooks.toggleClass(button, 'button-inverse');
+				}, false);
+			}(this.airhooks));
+		</file>
+		</example>
 	 */
 	return function toggleClass(element, className, force) {
 		var isForced = (typeof force !== 'undefined');

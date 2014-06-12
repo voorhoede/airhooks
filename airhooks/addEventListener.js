@@ -22,39 +22,39 @@
 	 * @param {Function} listener - Event listener called when event is triggered.
 	 *
 	 * @example
-	   <example name="addEventListener-amd" type="AMD" deps="vendor/require.min.js">
-	   	<file name="index.html">
-	   		<img data-image alt="get ready">
-	   		<button class="button button-primary" data-dance>Dance</button>
-	   	</file>
-	   	<file name="app.js">
-	   		require(['airhooks/addEventListener'], function(addEventListener) {
-	   			var button = document.querySelector('[data-dance]');
-	   			var image = document.querySelector('[data-image]');
+		<example name="addEventListener-amd" type="AMD" deps="vendor/require.min.js">
+		<file name="index.html">
+			<img data-image alt="get ready">
+			<button class="button button-primary" data-dance>Dance</button>
+		</file>
+		<file name="app.js">
+			require(['airhooks/addEventListener'], function(addEventListener) {
+				var button = document.querySelector('[data-dance]');
+				var image = document.querySelector('[data-image]');
 
-	   			addEventListener(button, 'click', function() {
-	   				image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
-	   			});
-	   		});
-	   	</file>
-	   </example>
+				addEventListener(button, 'click', function() {
+					image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
+				});
+			});
+		</file>
+		</example>
 
-	   <example name="addEventListener-web" type="web" deps="airhooks/addEventListener.js">
-	   	<file name="index.html">
-	   		<img data-image alt="get ready">
-	   		<button class="button button-primary" data-dance>Dance</button>
-	   	</file>
-	   	<file name="app.js">
-	   		(function(airhooks){
-	   			var button = document.querySelector('[data-dance]');
-	   			var image = document.querySelector('[data-image]');
+		<example name="addEventListener-web" type="web" deps="airhooks/addEventListener.js">
+		<file name="index.html">
+			<img data-image alt="get ready">
+			<button class="button button-primary" data-dance>Dance</button>
+		</file>
+		<file name="app.js">
+			(function(airhooks){
+				var button = document.querySelector('[data-dance]');
+				var image = document.querySelector('[data-image]');
 
-	   			airhooks.addEventListener(button, 'click', function(){
-	   				image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
-	   			});
-	   		}(this.airhooks));
-	   	</file>
-	   </example>
+				airhooks.addEventListener(button, 'click', function(){
+					image.src = 'http://www.stickerupper.com/images/detailed/002-breakdance-one-hand-stand-dance-sticker.gif';
+				});
+			}(this.airhooks));
+		</file>
+		</example>
 	 */
 	return function addEventListener(target, type, listener) {
 		if (document.addEventListener) {
@@ -64,5 +64,5 @@
 				listener.call(target);
 			});
 		}
-	}
+	};
 }));

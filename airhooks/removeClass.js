@@ -21,35 +21,35 @@
 	 * @param {String} className
 	 *
 	 * @example
-	   <example name="removeClass-amd" type="AMD" deps="vendor/require.min.js">
-	   	<file name="index.html">
-	   		<button class="button button-primary" data-trigger>uncolor me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		require(['airhooks/removeClass'], function(removeClass) {
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="removeClass-amd" type="AMD" deps="vendor/require.min.js">
+		<file name="index.html">
+			<button class="button button-primary" data-trigger>uncolor me</button>
+		</file>
+		<file name="app.js">
+			require(['airhooks/removeClass'], function(removeClass) {
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				removeClass(button, 'button-primary');
-	   			}, false);
-	   		});
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					removeClass(button, 'button-primary');
+				}, false);
+			});
+		</file>
+		</example>
 
-	   <example name="removeClass-web" type="web" deps="airhooks/removeClass.js">
-	   	<file name="index.html">
-	   		<button class="button button-primary" data-trigger>uncolor me</button>
-	   	</file>
-	   	<file name="app.js">
-	   		(function(airhooks) {
-	   			var button = document.querySelector('[data-trigger]');
+		<example name="removeClass-web" type="web" deps="airhooks/removeClass.js">
+		<file name="index.html">
+			<button class="button button-primary" data-trigger>uncolor me</button>
+		</file>
+		<file name="app.js">
+			(function(airhooks) {
+				var button = document.querySelector('[data-trigger]');
 
-	   			button.addEventListener('click', function() {
-	   				airhooks.removeClass(button, 'button-primary');
-	   			}, false);
-	   		}(this.airhooks));
-	   	</file>
-	   </example>
+				button.addEventListener('click', function() {
+					airhooks.removeClass(button, 'button-primary');
+				}, false);
+			}(this.airhooks));
+		</file>
+		</example>
 	 */
 	return function removeClass(element, className) {
 		if (document.documentElement.classList) {

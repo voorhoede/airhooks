@@ -2,6 +2,9 @@
 	"name": "airhooks",
 	"version": "0.0.1",
 	"license": "MIT",
+	"authors": [
+		"Jasper Moelker <jasper@voorhoede.nl>"
+	],
 	"main": [
 		"airhooks/addClass.js",
 		"airhooks/addEventListener.js",
@@ -12,11 +15,16 @@
 		"airhooks/removeEventListener.js",
 		"airhooks/togleClass.js"
 	],
+	"moduleType": [
+		"amd",
+		"globals"
+	],
 	"ignore": [
 		"**/.*",
 		"!.jshintrc",
-		"examples/*",
-		"vendor/*",
+		"examples",
+		"node_modules",
+		"vendor",
 		"index.html"
 	],
 	"dependencies": {},

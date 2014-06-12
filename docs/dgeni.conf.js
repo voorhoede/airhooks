@@ -61,7 +61,7 @@ module.exports = function(config) {
 	]);
 
 	config.set('rendering.requirejs', {
-		sourceFile: '../vendor/require.min.js',
+		sourceFile: '../bower_components/requirejs/require.js',
 		targetFile: 'assets/vendor/require.min.js',
 		baseUrl: path.resolve(config.get('rendering.voorhoede.baseHref'), 'assets')
 	});

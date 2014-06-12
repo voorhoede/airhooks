@@ -22,9 +22,7 @@ module.exports = function (grunt) {
 	// Load all npm installed grunt tasks.
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	// load all project grunt tasks.
-	grunt.registerTask('default', ['']);
-
+	// Project specific tasks.
 	grunt.registerTask('docs', 'Generate docs via dgeni.', function() {
 		var dgeni = require('dgeni');
 		var done = this.async();
@@ -32,4 +30,6 @@ module.exports = function (grunt) {
 		var generateDocs = dgeni.generator('docs/dgeni.conf.js');
 		generateDocs().then(done);
 	});
+
+	grunt.registerTask('default', ['docs']);
 };

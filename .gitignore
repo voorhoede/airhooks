@@ -1,3 +1,6 @@
+# Project files
+build
+
 # OS
 .DS_Store
 thumbs.db
@@ -16,8 +19,8 @@ nb-configuration.xml
 nbactions.xml
 nbproject/private
 
+# Bower
+bower_components
+
 # Node
 node_modules
-
-# Build
-build

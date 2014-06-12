@@ -29,7 +29,9 @@
 		"index.html"
 	],
 	"dependencies": {},
-	"devDependencies": {},
+	"devDependencies": {
+		"requirejs": "~2.1.13"
+	},
 	"keywords": [
 		"javascript",
 		"helpers",

@@ -39,7 +39,7 @@ module.exports = function(config) {
 	config.set('rendering.voorhoede.siteName', 'Airhooks');
 
 	// Base href will be prefixed to all internal links on the website
-	config.set('rendering.voorhoede.baseHref', '/airhooks/build/docs/');
+	config.set('rendering.voorhoede.baseHref', '/build/docs/');
 
 	// Move the core CSS file into 'assets/'
 	config.set('rendering.voorhoede.coreCss.outputFile', 'assets/voorhoede-core.css');

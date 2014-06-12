@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Example - {$ doc.id $}</title>
+		{% for stylesheet in doc.stylesheets %}
+		<link href="{$ stylesheet.path $}" rel="stylesheet">
+		{% endfor %}
+	</head>
+	<body>
+		{$ doc.fileContents $}
+
+		{% for script in doc.scripts %}
+		<script src="{$ script.path $}"></script>
+		{% endfor %}
+
+		<script>
+			if (typeof define === 'function' && define.amd && require) {
+				require.config({ baseUrl: '{$ extraData.config.rendering.requirejs.baseUrl $}' });
+			}
+		</script>
+	</body>
+</html>

@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"authors": [
-		"Jasper Moelker <jasper@voorhoede.nl>"
+		"Jasper Moelker <jasper@voorhoede.nl>",
+		"Maarten Verbaarschot <maarten@voorhoede.nl>"
 	],
 	"main": [
 		"airhooks/addClass.js",
